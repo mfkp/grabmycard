@@ -3,19 +3,19 @@
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
 <title>Grab My Card</title> 
-<link rel="stylesheet" href="stylesheets/slider.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
-<style type="text/css">@import("stylesheets/iemac-center.css");</style>
-<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/cardflip.css" />
+<link rel="stylesheet" href="css/slider.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<style type="text/css">@import("css/iemac-center.css");</style>
+<link rel="stylesheet" type="text/css" media="screen" href="css/cardflip.css" />
 
-<script type="text/javascript" src="javascripts/pngfix.pack.js"></script>   
-<script type="text/javascript" src="javascripts/jquery-1.3.2.min.js"></script>
-<script type="text/javascript" src="javascripts/cardslider.js"></script> 
+<script type="text/javascript" src="js/pngfix.pack.js"></script>   
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/cardslider.js"></script> 
 <script type="text/javascript">
 	DD_belatedPNG.fix('.png_bg');
 </script>
 <!--[if lt IE 7]>
-<script type="text/javascript" src="javascripts/unitpngfix.js"></script>
+<script type="text/javascript" src="js/unitpngfix.js"></script>
 <![endif]-->
 
 </head> 
