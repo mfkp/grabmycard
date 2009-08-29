@@ -1,0 +1,12 @@
+<% if !@page_user.nil? %>
+	<% @user = @page_user %>
+<% end %>
+<p>
+  <b>Username:</b>
+  <%=h @user.username %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @user.email %>
+</p>

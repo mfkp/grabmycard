@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   
   map.root :controller => 'users'
+  map.connect 'users/:id/edit', :controller => 'users', :action => 'edit'
   
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
