@@ -2,5 +2,5 @@
 	<% @page_user = User.find_by_username(current_subdomain) %>
 	<%= render :partial => 'show' %>
 <% else %>
-	<%= render :partial => 'home' %>
+	<% redirect_to root_url, :subdomain => 'www' %>
 <% end %>
