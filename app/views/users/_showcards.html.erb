@@ -10,3 +10,10 @@
   <b>Email:</b>
   <%=h @user.email %>
 </p>
+
+<p>
+	<b>Cards:</b> 
+	<% @user.cards.each do |card| %>
+	<%= link_to card.title, :controller => 'cards', :action => 'show', :id => card.id %>, 
+	<% end %>
+</p>

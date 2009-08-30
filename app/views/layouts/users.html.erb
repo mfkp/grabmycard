@@ -108,10 +108,14 @@
 								<div class="wrapper">
 									<% if current_subdomain != nil && User.find_by_username(current_subdomain) != nil %>
 										<% @page_user = User.find_by_username(current_subdomain) %>
-										<%= render :partial => 'show' %>
+										<%= render :partial => 'showcards' %>
 									<% else %>
 										<%= yield %>
 									<% end %>
+									<p style="margin:1.5em 1em 1.5em 1em; position:absolute; bottom: 30px; width:667px; height:20px;"> 
+										<span id="prev" style="position:absolute; left:0px;"><a href="#previous" class="cross-link" title="Previous">&#171; Previous</a></span>
+										<span id="next" style="position:absolute; right:0px;"><a href="#next" class="cross-link" title="Next">Next &#187;</a></span>
+									</p>
 								</div>
 							</div>
 						</div>
