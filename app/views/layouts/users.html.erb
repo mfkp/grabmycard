@@ -110,23 +110,22 @@
 										<% @page_user = User.find_by_username(current_subdomain) %>
 										<%= render :partial => 'show' %>
 									<% else %>
-										
 										<%= yield %>
 									<% end %>
 								</div>
 							</div>
 						</div>
 					</div>
-				<div class=" png_bg" id="tack" style="z-index:100; position:absolute; left:338px; top:10px; background: url('images/tack.png') no-repeat; width:50px; height:50px;"></div>
-				<div class=" png_bg" id="shadow" style="display:inline; z-index:99; position:absolute; left:330px; top:8px; background: url('images/shadow.png') no-repeat; width:58px; height:54px;"></div>
+				<div class=" png_bg" id="tack" style="z-index:100; position:absolute; left:338px; top:10px; background: url('/images/tack.png') no-repeat; width:50px; height:50px;"></div>
+				<div class=" png_bg" id="shadow" style="display:inline; z-index:99; position:absolute; left:330px; top:8px; background: url('/images/shadow.png') no-repeat; width:58px; height:54px;"></div>
 				</div><!-- .panelContainer --> 
 			</div><!-- #slider1 -->
 		</div><!-- .slider-wrap -->
 	</div> 
  </div>
  <div id="footer">
-	<div style="width:54px; height:53px; position:relative; float:left; background: url('images/frame_bottom_left.jpg') bottom left no-repeat;"></div>
-	<div style="width:54px; height:53px; position:relative; float:right; background: url('images/frame_bottom_right.jpg') bottom right no-repeat;"></div>
+	<div style="width:54px; height:53px; position:relative; float:left; background: url('/images/frame_bottom_left.jpg') bottom left no-repeat;"></div>
+	<div style="width:54px; height:53px; position:relative; float:right; background: url('/images/frame_bottom_right.jpg') bottom right no-repeat;"></div>
 </div>
 
 </body> 

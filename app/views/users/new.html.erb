@@ -2,34 +2,38 @@
 
 <% form_for(@user) do |f| %>
   <%= f.error_messages %>
-
+<fieldset style="width: 200px;float:left; margin-left: 30px;">
+	<legend>Your Name and Username</legend>
+	  <p>
+	    <%= f.label :firstname %><br />
+	    <%= f.text_field :firstname %>
+	  </p>
+	  <p>
+	    <%= f.label :lastname %><br />
+	    <%= f.text_field :lastname %>
+	  </p>
+	  <p>
+	    <%= f.label :username %><br />
+	    <%= f.text_field :username %>
+	  </p>
+</fieldset>
+<fieldset style="width:200px; float:left; margin-left:30px;">
+	<legend>Email/Password</legend>
+	  <p>
+	    <%= f.label :email %><br />
+	    <%= f.text_field :email %>
+	  </p>
+	  <p>
+	    <%= f.label :password %><br />
+	    <%= f.password_field :password %>
+	  </p>
+	  <p>
+	    <%= f.label :password_confirmation %><br />
+	    <%= f.password_field :password_confirmation %>
+	  </p>
+</fieldset>
+<div style="clear:both;"></div>
   <p>
-    <%= f.label :firstname %><br />
-    <%= f.text_field :firstname %>
-  </p>
-  <p>
-    <%= f.label :lastname %><br />
-    <%= f.text_field :lastname %>
-  </p>
-  <p>
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Create' %> | <%= link_to 'Cancel', users_path %>
   </p>
 <% end %>
-
-<%= link_to 'Back', users_path %>
