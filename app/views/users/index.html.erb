@@ -1,24 +1,17 @@
-<h1>Listing users</h1>
-
-<table>
-  <tr>
-    <th>Username</th>
-    <th>Email</th>
-    <th>Password</th>
-  </tr>
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%=h user.username %></td>
-    <td><%=h user.email %></td>
-    <td><%=h user.password %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New user', new_user_path %>
+									<div style="float:right; width:200px; text-align:right;">
+										<h3 style="text-align:right;">About Me</h3>
+										<br/><img src="http://www.kylepowers.com/images/kyle.png" />
+										<p id="cross-links">
+											<a href="#" class="cross-link">About Me</a><br/>
+											<a href="#" class="cross-link">Skills</a><br/>
+											<a href="#" class="cross-link">Work Experience</a><br/>
+											<a href="#" class="cross-link">Portfolio</a><br/>
+											<a href="#" class="cross-link">Contact</a><br/>
+										</p>
+									</div>
+									<h3>Kyle Powers</h3>
+									<p>I'm Kyle Powers, a twenty-year-old student from the midwest, currently working on my Bachelor of Science in Computer Science at the University of Nebraska, Lincoln. I am passionate about anything related to web technologies, usable & accessible web design, art & illustration, and typography. In my free time - which is hard to come by - I try to keep up with my favorite TV shows: The Office, Tim and Eric, and South Park.</p>
+									<p style="margin:1.5em 1em 1.5em 1em; position:absolute; bottom: 30px; width:667px; height:20px;"> 
+										<span id="prev" style="position:absolute; left:0px;"><a href="#previous" class="cross-link" title="Previous">&#171; Previous</a></span>
+										<span id="next" style="position:absolute; right:0px;"><a href="#next" class="cross-link" title="Next">Next &#187;</a></span>
+									</p>
