@@ -9700,3 +9700,152 @@ ActionController::RoutingError (No route matches "/stylesheets/images/card.png" 
   -e:2
 
 Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-30 19:43:18) [GET]
+
+ActionController::RoutingError (No route matches "/posts/new" with {:domain=>"grabmycard.local", :subdomain=>"www", :method=>:get, :host=>"www.grabmycard.local"}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing CardsController#new (for 127.0.0.1 at 2009-08-30 19:43:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"cards"}
+Rendering template within layouts/application
+Rendering cards/new
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 29ms (View: 22, DB: 0) | 200 OK [http://www.grabmycard.local/cards/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-30 19:43:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/card.png" with {:domain=>"grabmycard.local", :subdomain=>"www", :method=>:get, :host=>"www.grabmycard.local"}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing CardsController#new (for 127.0.0.1 at 2009-08-30 19:43:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"cards"}
+Rendering template within layouts/application
+Rendering cards/new
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 26ms (View: 20, DB: 0) | 200 OK [http://www.grabmycard.local/cards/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-30 19:43:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/card.png" with {:domain=>"grabmycard.local", :subdomain=>"www", :method=>:get, :host=>"www.grabmycard.local"}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing CardsController#new (for 127.0.0.1 at 2009-08-30 19:43:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"cards"}
+Rendering template within layouts/application
+Rendering cards/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 26ms (View: 20, DB: 0) | 200 OK [http://www.grabmycard.local/cards/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-30 19:43:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/card.png" with {:domain=>"grabmycard.local", :subdomain=>"www", :method=>:get, :host=>"www.grabmycard.local"}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing CardsController#create (for 127.0.0.1 at 2009-08-30 19:44:03) [POST]
+  Parameters: {"commit"=>"Create Card", "action"=>"create", "authenticity_token"=>"67iFKxLEF8eVJVAiiI8cY9cKJ0xCNw+3Jx+o5oiwWS0=", "card"=>{"body"=>"Hey, I'm Kyle Powers.", "title"=>"About Me", "user_id"=>"1"}, "controller"=>"cards"}
+  [4;36;1mCard Create (0.5ms)[0m   [0;1mINSERT INTO "cards" ("updated_at", "title", "body", "user_id", "created_at") VALUES('2009-08-31 00:44:03', 'About Me', 'Hey, I''m Kyle Powers.', 1, '2009-08-31 00:44:03')[0m
+Redirected to http://www.grabmycard.local:3002/cards/4
+Completed in 16ms (DB: 0) | 302 Found [http://www.grabmycard.local/cards]
+
+
+Processing CardsController#show (for 127.0.0.1 at 2009-08-30 19:44:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"cards"}
+  [4;35;1mCard Load (0.2ms)[0m   [0mSELECT * FROM "cards" WHERE ("cards"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering cards/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://www.grabmycard.local/cards/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-30 19:44:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/card.png" with {:domain=>"grabmycard.local", :subdomain=>"www", :method=>:get, :host=>"www.grabmycard.local"}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing CardsController#index (for 127.0.0.1 at 2009-08-30 19:44:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"cards"}
+  [4;36;1mCard Load (0.7ms)[0m   [0;1mSELECT * FROM "cards" [0m
+Rendering template within layouts/application
+Rendering cards/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://www.grabmycard.local/cards]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-30 19:44:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/card.png" with {:domain=>"grabmycard.local", :subdomain=>"www", :method=>:get, :host=>"www.grabmycard.local"}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing CardsController#index (for 127.0.0.1 at 2009-08-30 19:44:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"cards"}
+  [4;35;1mCard Load (0.7ms)[0m   [0mSELECT * FROM "cards" [0m
+Rendering template within layouts/application
+Rendering cards/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'kylepowers') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'kylepowers') LIMIT 1[0m
+
+ActionView::TemplateError (Missing template cards/_showcards.erb in view path app/views) on line #41 of app/views/layouts/application.html.erb:
+38: 					<div id="pictures">
+39: 						<% if current_subdomain != nil && User.find_by_username(current_subdomain) != nil %>
+40: 							<% @page_user = User.find_by_username(current_subdomain) %>
+41: 							<%= render :partial => 'showcards' %>
+42: 						<% else %>
+43: 						<div id="slider1" class="card-div unitPng">
+44: 							<div class="panel">
+
+    app/views/layouts/application.html.erb:41
+    app/controllers/cards_controller.rb:7:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (44.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-08-30 19:44:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'kylepowers') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'kylepowers') LIMIT 1[0m
+  [4;35;1mCard Load (0.5ms)[0m   [0mSELECT * FROM "cards" WHERE ("cards".user_id = 1) [0m
+Rendered users/_showcards (8.9ms)
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://kylepowers.grabmycard.local/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-30 19:44:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/card.png" with {:domain=>"grabmycard.local", :subdomain=>"kylepowers", :method=>:get, :host=>"kylepowers.grabmycard.local"}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
