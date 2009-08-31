@@ -1,32 +1,40 @@
-<h1>Editing user</h1>
-
+<br/>
 <% form_for(@user) do |f| %>
   <%= f.error_messages %>
-
+<fieldset style="float:left;margin-left:15px;">
+	<legend>Profile Info</legend>
+	  <p>
+	    <%= f.label 'First Name' %><br />
+	    <%= f.text_field :firstname %>
+	  </p>
+	  <p>
+	    <%= f.label 'Last Name' %><br />
+	    <%= f.text_field :lastname %>
+	  </p>
+	  <p>
+	    <%= f.label :username %><br />
+	    <%= f.text_field :username %>
+	  </p>
+	  <p>
+	    <%= f.label :email %><br />
+	    <%= f.text_field :email %>
+	  </p>
+</fieldset>
+<fieldset style="float:left; margin-left:15px;">
+	<legend>Email/Password</legend>
+	
+	<p>Leave blank to keep current password.</p>
+	  <p>
+	    <%= f.label :password %><br />
+	    <%= f.password_field :password %>
+	  </p>
+	  <p>
+	    <%= f.label :password_confirmation %><br />
+	    <%= f.password_field :password_confirmation %>
+	  </p>
+</fieldset>
+<div style="clear:both;"></div>
   <p>
-    <%= f.label 'First Name' %><br />
-    <%= f.text_field :firstname %>
-  </p>
-  <p>
-    <%= f.label 'Last Name' %><br />
-    <%= f.text_field :lastname %>
-  </p>
-  <p>
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.text_field :password %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Update' %> | <%= link_to 'Cancel', request.env['HTTP_REFERER'] %>
   </p>
 <% end %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
