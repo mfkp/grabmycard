@@ -1,6 +1,4 @@
-<% if !@page_user.nil? %>
-	<% @user = @page_user %>
-<% end %>
+<% @page_user = User.find_by_username(current_subdomain) %>
 <% slider_chooser = true %>
 
 <% @user.cards.reverse.each do |card| %>
