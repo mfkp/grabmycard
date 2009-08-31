@@ -1,19 +1,34 @@
 <% if !@page_user.nil? %>
 	<% @user = @page_user %>
 <% end %>
-<p>
-  <b>Username:</b>
-  <%=h @user.username %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%=h @user.email %>
-</p>
-
-<p>
-	<b>Cards:</b> 
-	<% @user.cards.each do |card| %>
-	<%= link_to card.title, :controller => 'cards', :action => 'show', :id => card.id %>, 
+<% slider_chooser = true %>
+<% @user.cards.reverse.each do |card| %>
+	<% if slider_chooser %>
+						<div id="slider1" class="card-div unitPng">
+	<% else %>
+						<div id="slider2" class="card-div unitPng">
 	<% end %>
-</p>
+							<div class="panel">
+								<div class="wrapper">
+									<div style="float:right; width:200px; text-align:right;">
+										<h3 style="text-align:right;"><%= card.title %></h3>
+										<br/>
+										<p id="cross-links">
+											<a href="#" class="cross-link">About Me</a><br/>
+											<a href="#" class="cross-link">Skills</a><br/>
+											<a href="#" class="cross-link">Work Experience</a><br/>
+											<a href="#" class="cross-link">Portfolio</a><br/>
+											<a href="#" class="cross-link">Contact</a><br/>
+										</p>
+									</div>
+									<h3><%= @page_user.firstname + " " + @page_user.lastname %></h3>
+									<p><%= card.body %></p>
+									<p style="margin:1.5em 1em 1.5em 1em; position:absolute; bottom: 30px; width:667px; height:20px;"> 
+										<span id="prev" style="position:absolute; left:0px;"><a href="#previous" class="cross-link" title="Previous">&#171; Previous</a></span>
+										<span id="next" style="position:absolute; right:0px;"><a href="#next" class="cross-link" title="Next">Next &#187;</a></span>
+									</p>
+								</div>
+							</div>
+						</div>
+	<% slider_chooser = !slider_chooser %>
+<% end %>

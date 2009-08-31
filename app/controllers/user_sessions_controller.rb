@@ -43,7 +43,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash[:notice] = "Successfully logged in."
-      redirect_to root_url
+      redirect_to :controller => 'users', :subdomain => current_user.username
     else
       render :action => 'new'
     end

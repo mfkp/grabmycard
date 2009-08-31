@@ -1,19 +1,18 @@
-<h1>New user_session</h1>
+<h1>Log In</h1>
 
 <% form_for(@user_session) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+    <%= f.label 'Username' %><br />
+    <%= f.text_field :username %>.grabmycard.com
   </p>
   <p>
     <%= f.label :password %><br />
     <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Log In' %> | <%= link_to 'Cancel', root_url %>
   </p>
 <% end %>
 
-<%= link_to 'Back', user_sessions_path %>
