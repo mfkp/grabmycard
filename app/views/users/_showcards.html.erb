@@ -1,7 +1,7 @@
 <% @page_user = User.find_by_username(current_subdomain) %>
 <% slider_chooser = true %>
 
-<% @user.cards.reverse.each do |card| %>
+<% @page_user.cards.reverse.each do |card| %>
 	<% if slider_chooser %>
 						<div id="slider1" class="card-div unitPng">
 	<% else %>
