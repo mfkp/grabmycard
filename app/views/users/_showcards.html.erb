@@ -13,6 +13,9 @@
 										<h3 style="text-align:right;"><%= card.title %></h3>
 										<br/>
 										<p id="cross-links">
+										<% @page_user.cards.each do |card| %>
+											<a href="#" class="cross-link"><%= card.title %></a><br/>
+										<% end %>
 											<a href="#" class="cross-link">About Me</a><br/>
 											<a href="#" class="cross-link">Skills</a><br/>
 											<a href="#" class="cross-link">Work Experience</a><br/>
