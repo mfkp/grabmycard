@@ -41,43 +41,14 @@
 		background: url('images/card.png') no-repeat;
 		}
  
-	#container div h2 {
-		font-size:120%;
-		font-weight:bold;
-		text-transform:uppercase;
-		margin:1em 0 0;
-		}
- 
 	#container div h3 {
 		font-size:100%;
 		font-weight:bold;
 		margin:.5em 0 0 .75em;
 		}
  
-	#container ul {
-		margin-left:2em;
-		}
- 
-	#container li span {
-		font-size:70%;
-		}
-		
-	#container h1 {
-		font-size:120%;
-		padding-top:2.4em;
-		margin-left:2.4em;
-		}
- 
 	#container p {
 		margin:1.5em 1.5em 1.5em 3em;
-		}
- 
-	address {
-		font-weight:normal;
-		font-size:80%;
-		font-style:normal;
-		text-align:right;
-		margin:0 20em 0 3em;
 		}
 	
 	#footer { 
