@@ -45,7 +45,7 @@ class CardsController < ApplicationController
     respond_to do |format|
       if @card.save
         flash[:notice] = 'Card was successfully created.'
-        format.html { redirect_to(@card) }
+        format.html { redirect_to(cards_url) }
         format.xml  { render :xml => @card, :status => :created, :location => @card }
       else
         format.html { render :action => "new" }
@@ -62,7 +62,7 @@ class CardsController < ApplicationController
     respond_to do |format|
       if @card.update_attributes(params[:card])
         flash[:notice] = 'Card was successfully updated.'
-        format.html { redirect_to(@card) }
+        format.html { redirect_to(cards_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
