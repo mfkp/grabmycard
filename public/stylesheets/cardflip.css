@@ -6,7 +6,7 @@
 	height: 100%;
 	width: 100%;
 }
-#slider1 { 
+.slider1 { 
 	position: absolute; 
 	top: 0; 
 	left: 0; 
@@ -14,7 +14,7 @@
 	width: 100%;
 	background: url('../images/card1.png') no-repeat;
 }
-#slider2 { 
+.slider2 { 
 	position: absolute; 
 	top: 0; 
 	left: 0; 

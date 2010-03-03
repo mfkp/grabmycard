@@ -3,9 +3,9 @@
 
 <% @page_user.cards.reverse.each do |card| %>
 	<% if slider_chooser %>
-						<div id="slider1" class="card-div unitPng">
+						<div id="card<%= card.id %>" class="slider1 card-div unitPng">
 	<% else %>
-						<div id="slider2" class="card-div unitPng">
+						<div id="card<%= card.id %>" class="slider2 card-div unitPng">
 	<% end %>
 							<div class="panel">
 								<div class="wrapper">
@@ -13,16 +13,16 @@
 										<h3 style="text-align:right;"><%= card.title %></h3>
 										<br/>
 										<p id="cross-links">
-										<% @page_user.cards.each do |card| %>
-											<a href="#" class="cross-link"><%= card.title %></a><br/>
+										<% @page_user.cards.each do |crd| %>
+											<span id="show"><a href="#?card=<%= crd.id %>" id="<%= crd.id %>" class="cross-link" onClick="bringToFront('<%= crd.id %>'); return false;" ><%= crd.title %></a></span><br/>
 										<% end %>
 										</p>
 									</div>
 									<h3><%= @page_user.firstname + " " + @page_user.lastname %></h3>
 									<p><%= card.body %></p>
 									<p style="margin:1.5em 1em 1.5em 1em; position:absolute; bottom: 30px; width:667px; height:20px;"> 
-										<span id="prev" style="position:absolute; left:0px;"><a href="#previous" class="cross-link" title="Previous">&#171; Previous</a></span>
-										<span id="next" style="position:absolute; right:0px;"><a href="#next" class="cross-link" title="Next">Next &#187;</a></span>
+										<span id="prev" style="position:absolute; left:0px;"><a href="#previous" class="cross-link" title="Previous" onClick="return swapFirstLast(false);">&#171; Previous</a></span>
+										<span id="next" style="position:absolute; right:0px;"><a href="#next" class="cross-link" title="Next" onClick="return swapFirstLast(true);">Next &#187;</a></span>
 									</p>
 								</div>
 							</div>
