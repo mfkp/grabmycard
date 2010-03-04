@@ -29,7 +29,9 @@
 		<img src="/images/frame_top_left.jpg" width="46" height="55" style="float:left;" alt="">
 		<img src="/images/frame_top_right.jpg" width="54" height="54" style="float:right;" alt="">
 	</div>
-	
+	<% if current_user %>
+		<span style="position:fixed; top:15px; right:100px; color:#000;"><%= link_to current_user.username, cards_url %></span>
+	<% end %>
 	<div id="distance"></div> 
 	<div id="container"> 
 		<div class="slider-wrap">

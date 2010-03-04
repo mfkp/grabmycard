@@ -29,3 +29,17 @@
 						</div>
 	<% slider_chooser = !slider_chooser %>
 <% end %>
+<% if @page_user.cards.empty? %>
+						<div id="card1" class="slider1 card-div unitPng">
+							<div class="panel">
+								<div class="wrapper">
+									<div style="float:right; width:200px; text-align:right;">
+										<h3 style="text-align:right;">Add Some Cards</h3>
+										<br/>
+									</div>
+									<h3><%= @page_user.firstname + " " + @page_user.lastname %></h3>
+									<p>You haven't added any cards yet, please log in and add your first card!</p>
+								</div>
+							</div>
+						</div>
+<% end %>
