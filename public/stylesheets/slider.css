@@ -40,5 +40,9 @@ h3 { border-bottom: 1px solid silver; margin-bottom: 5px; padding-bottom: 3px; t
 }
 
 .stripViewer .panelContainer .panel .wrapper { /* Wrapper to give some padding in the panels, without messing with existing panel width */
+	padding: 15px;
+}
+
+.stripViewer .panelContainer .panel .wrapper .cardslist{ /* Wrapper to give some padding in the panels, without messing with existing panel width */
 	padding-left: 35px;
 }
