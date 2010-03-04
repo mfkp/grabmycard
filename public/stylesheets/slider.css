@@ -1,8 +1,8 @@
 .panel { margin-top:22px; }
+
 p#cross-links { text-align: center }
 
 p#cross-links { margin-bottom: 30px; padding-bottom: 30px }
-
 
 a:focus { outline:none }
 
@@ -46,3 +46,30 @@ h3 { border-bottom: 1px solid silver; margin-bottom: 5px; padding-bottom: 3px; t
 .stripViewer .panelContainer .panel .wrapper .cardslist{ /* Wrapper to give some padding in the panels, without messing with existing panel width */
 	padding-left: 35px;
 }
+
+#pictures { position: relative; height: 440px; width:720px; }
+#slider { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	height: 100%;
+	width: 100%;
+}
+.slider1 { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	height: 100%;
+	width: 100%;
+	background: url('../images/card1.png') no-repeat;
+}
+.slider2 { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	height: 100%;
+	width: 100%;
+	background: url('../images/card2.png') no-repeat;
+}
+
+#prev, #next { margin-top: 30px; text-align: center; font-size: 1.5em; }
