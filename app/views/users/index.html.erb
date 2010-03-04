@@ -1,10 +1,9 @@
 									<div style="float:right; width:200px; text-align:right;">
 										<h3 style="text-align:right;">Welcome</h3>
 										<p id="cross-links">
-											<a href="#" class="cross-link">About</a><br/>
-											<a href="#" class="cross-link">Tour</a><br/>
-											<a href="#" class="cross-link">Pricing</a><br/>
-											<%= link_to 'Log In', login_url, :subdomain => 'www' %><br/>
+											<%= link_to 'About', root_url %><br/>
+											<%= link_to 'Demo', index_url(:subdomain => 'kylepowers') %><br/>
+											<%= link_to 'Log In', login_url %><br/>
 											<%= link_to 'Sign Up', new_user_url %><br/>
 										</p>
 									</div>
