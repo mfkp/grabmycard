@@ -17,18 +17,21 @@ body {
 
 #topmenu {
 	position:relative; 
-	top: 15px; 
+	top: 0; 
 	float:right; 
 	color:#000;
 }
 
 #topmenu a {
 	color:#000;
+	text-decoration: none;
 }
 
 #topmenu span {
 	background: #fff;
-	padding: 5px 3px 5px 3px;
+	padding: 5px 10px;
+	margin: 0px;
+	border: 1px solid black;
 }
 
 #wrapper {
@@ -63,7 +66,7 @@ body {
 }
 
 #container p {
-	margin:1.5em 1.5em 1.5em 3em;
+	margin:1.5em 1.5em 1.5em 1.5em;
 }
 
 #container a {
