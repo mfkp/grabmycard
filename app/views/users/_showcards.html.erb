@@ -20,10 +20,12 @@
 									</div>
 									<h3><%= @page_user.firstname + " " + @page_user.lastname %></h3>
 									<p><%= card.body %></p>
-									<p style="margin:1.5em 1em 1.5em 1em; position:absolute; bottom: 30px; width:667px; height:20px;"> 
-										<span id="prev" style="position:absolute; left:0px;"><a href="#previous" class="cross-link" title="Previous" onClick="return swapFirstLast(false);">&#171; Previous</a></span>
-										<span id="next" style="position:absolute; right:0px;"><a href="#next" class="cross-link" title="Next" onClick="return swapFirstLast(true);">Next &#187;</a></span>
-									</p>
+									<% if @page_user.cards.length > 1 %>
+										<p style="margin:1.5em 1em 1.5em 1em; position:absolute; bottom: 30px; width:667px; height:20px;"> 
+											<span id="prev" style="position:absolute; left:0px;"><a href="#previous" class="cross-link" title="Previous" onClick="return swapFirstLast(false);">&#171; Previous</a></span>
+											<span id="next" style="position:absolute; right:0px;"><a href="#next" class="cross-link" title="Next" onClick="return swapFirstLast(true);">Next &#187;</a></span>
+										</p>
+									<% end %>
 								</div>
 							</div>
 						</div>

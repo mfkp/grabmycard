@@ -29,9 +29,16 @@
 		<img src="/images/frame_top_left.jpg" width="46" height="55" style="float:left;" alt="">
 		<img src="/images/frame_top_right.jpg" width="54" height="54" style="float:right;" alt="">
 	</div>
+	<div id="topmenu">
 	<% if current_user %>
-		<span style="position:fixed; top:15px; right:100px; color:#000;"><%= link_to current_user.username, cards_url %></span>
+		<span><%= link_to 'My Cards', cards_url %> | </span>
+		<span><%= link_to 'Settings', edit_user_path(current_user) %> | </span>
+		<span><%= link_to 'My Site', index_url(:subdomain => current_user.username), :popup => true %> | </span>
+		<span><%= link_to 'Logout', logout_url %></span>
+	<% else %>
+		<span><%= link_to 'Login', login_url(:subdomain => 'www') %></span>
 	<% end %>
+	</div>
 	<div id="distance"></div> 
 	<div id="container"> 
 		<div class="slider-wrap">
@@ -54,7 +61,7 @@
 				<div class=" png_bg" id="tack" style="z-index:100; position:absolute; left:338px; top:10px; background: url('/images/tack.png') no-repeat; width:50px; height:50px;"></div>
 				<div class=" png_bg" id="shadow" style="display:inline; z-index:99; position:absolute; left:330px; top:8px; background: url('/images/shadow.png') no-repeat; width:58px; height:54px;"></div>
 				</div><!-- .panelContainer --> 
-			</div><!-- #slider1 -->
+			</div><!-- #slider -->
 		</div><!-- .slider-wrap -->
 	</div> 
  </div>

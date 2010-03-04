@@ -3,6 +3,7 @@ p#cross-links { text-align: center }
 
 p#cross-links { margin-bottom: 30px; padding-bottom: 30px }
 
+
 a:focus { outline:none }
 
 img { border: 0 }
@@ -39,5 +40,5 @@ h3 { border-bottom: 1px solid silver; margin-bottom: 5px; padding-bottom: 3px; t
 }
 
 .stripViewer .panelContainer .panel .wrapper { /* Wrapper to give some padding in the panels, without messing with existing panel width */
-	padding: 10px;
+	padding: 15px;
 }

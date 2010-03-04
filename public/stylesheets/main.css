@@ -1,19 +1,35 @@
 * {
 	margin:0;
 	padding:0;
-	}
+}
 
 html, body {
 	height:100%;
 	overflow:hidden;
-	}
+}
 
 body {
 	background: url('../images/cork_bg.jpg') repeat top left;
 	color:#630;
 	font:100.01%/1.4 sans-serif;
 	text-align:center; /* horizontal centering for IE Win quirks */
-	}
+}
+
+#topmenu {
+	position:relative; 
+	top: 15px; 
+	float:right; 
+	color:#000;
+}
+
+#topmenu a {
+	color:#000;
+}
+
+#topmenu span {
+	background: #fff;
+	padding: 5px 3px 5px 3px;
+}
 
 #wrapper {
 	min-height: 100%;
@@ -29,7 +45,7 @@ body {
 	background-color:#fc6;
 	margin-bottom:-13.75em; /* half of container's height */
 	float:left;
-	}
+}
 
 #container {
 	margin:0 auto;
@@ -38,17 +54,21 @@ body {
 	height:27.5em;
 	width:45em;
 	clear:left;
-	}
+}
 
 #container div h3 {
 	font-size:100%;
 	font-weight:bold;
 	margin:.5em 0 0 .75em;
-	}
+}
 
 #container p {
 	margin:1.5em 1.5em 1.5em 3em;
-	}
+}
+
+#container a {
+	color: #630;
+}
 
 #footer { 
 	position: fixed; 
