@@ -1,18 +1,12 @@
 <div class="cardslist">
 <h1><%= current_user.firstname %>'s Cards</h1>
 
-<table width="100%">
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-  </tr>
+<table>
 
 <% @cards.each do |card| %>
   <tr>
-    <td><%=h card.title %></td>
-    <td><%=h card.body %></td>
-    <td><%= link_to 'Edit', edit_card_path(card) %></td>
-    <td><%= link_to 'Delete', card, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to card.title, edit_card_path(card) %></td>
+    <td>(<%= link_to 'Delete', card, :confirm => 'Are you sure?', :method => :delete %>)</td>
   </tr>
 <% end %>
 </table>
