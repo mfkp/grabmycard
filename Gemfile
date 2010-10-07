@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.beta3'
+gem 'rails'
 
 gem 'authlogic'
 source 'http://gems.github.com'
