@@ -27,7 +27,7 @@
 	<div id="topmenu">
 	<% if current_user %>
 		<span><%= link_to 'My Cards', cards_url %></span>
-		<span><%= link_to 'My Site', root_url(:subdomain => current_user.username), :popup => true %></span>
+		<span><%= link_to 'My Site', index_url(:subdomain => current_user.username), :popup => true %></span>
 		<span><%= link_to 'Settings', edit_user_path(current_user) %></span>
 		<span><%= link_to 'Logout', logout_url %></span>
 	<% elsif request.subdomain == nil %>
