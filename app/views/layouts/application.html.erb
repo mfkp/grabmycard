@@ -40,8 +40,8 @@
 			<div id="slider" class="stripViewer">
 				<div class="panelContainer">
 					<div id="pictures">
-						<% if current_subdomain != nil && User.find_by_username(current_subdomain) != nil %>
-							<% @page_user = User.find_by_username(current_subdomain) %>
+						<% if request.subdomain != nil && User.find_by_username(request.subdomain) != nil %>
+							<% @page_user = User.find_by_username(request.subdomain) %>
 							<%= render :partial => 'showcards' %>
 						<% else %>
 						<div id="card1" class="slider1 card-div unitPng">
