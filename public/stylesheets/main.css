@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-	background: url('../images/cork_bg.jpg') repeat top left;
+	background: url('../images/cork.jpg') repeat top left;
 	color:#630;
 	font:100.01%/1.4 sans-serif;
 	text-align:center; /* horizontal centering for IE Win quirks */
