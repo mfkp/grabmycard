@@ -10303,3 +10303,19 @@ ActionController::RoutingError (No route matches "/stylesheets/images/card.png" 
   -e:2
 
 Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-08-31 22:13:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 38ms (View: 30, DB: 0) | 200 OK [http://www.grabmycard.local/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-31 22:13:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/card.png" with {:domain=>"grabmycard.local", :subdomain=>"www", :method=>:get, :host=>"www.grabmycard.local"}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
