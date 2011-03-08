@@ -1,6 +1,6 @@
-<h1>Editing card</h1>
+<h1>Edit card</h1>
 
-<% form_for(@card) do |f| %>
+<%= form_for(@card) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -12,9 +12,6 @@
     <%= f.text_area :body, :style => 'height:150px;' %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Update' %> | <%= link_to 'Back', cards_path %>
   </p>
 <% end %>
-
-<%= link_to 'Show', @card %> |
-<%= link_to 'Back', cards_path %>

@@ -1,5 +1,5 @@
 <br/>
-<% form_for(@user) do |f| %>
+<%= form_for(@user) do |f| %>
   <%= f.error_messages %>
 <fieldset style="float:left;margin-left:15px;">
 	<legend>Profile Info</legend>
@@ -21,7 +21,7 @@
 	  </p>
 </fieldset>
 <fieldset style="float:left; margin-left:15px;">
-	<legend>Email/Password</legend>
+	<legend>Password</legend>
 	
 	<p>Leave blank to keep current password.</p>
 	  <p>
@@ -34,7 +34,7 @@
 	  </p>
 </fieldset>
 <div style="clear:both;"></div>
-  <p>
+  <p style="float:left;">
     <%= f.submit 'Update' %> | <%= link_to 'Cancel', request.env['HTTP_REFERER'] %>
   </p>
 <% end %>

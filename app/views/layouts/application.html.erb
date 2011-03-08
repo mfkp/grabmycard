@@ -1,25 +1,20 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"> 
 <html> 
 <head> 
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 <title>Grab My Card</title> 
-<%= stylesheet_link_tag 'slider' %>
-<%= stylesheet_link_tag 'main' %>
+<%= stylesheet_link_tag :all, :cache => true %>
 <style type="text/css">@import("/stylesheets/iemac-center.css");</style>
-<%= stylesheet_link_tag 'cardflip' %>
-
-<%= javascript_include_tag 'pngfix.pack' %>
-<%= javascript_include_tag 'jquery-1.3.2.min' %>
-<%= javascript_include_tag 'cardslider' %>
+<%= javascript_include_tag :all, :cache => true %>
 <!--[if lt IE 7]>
 <%= javascript_include_tag 'unitpngfix' %>
-<![endif]-->
 <script type="text/javascript">
 	DD_belatedPNG.fix('.png_bg');
 </script>
+<![endif]-->
 </head> 
 
-<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<body onLoad="setIndexes();">
  
 <div id="wrapper"> 
 	<div class="png_bg" style="position:absolute; left:0px; width:54px; height:100%; background: url('/images/frame_left.png') repeat-y top left; overflow:hidden;"></div>
@@ -29,18 +24,27 @@
 		<img src="/images/frame_top_left.jpg" width="46" height="55" style="float:left;" alt="">
 		<img src="/images/frame_top_right.jpg" width="54" height="54" style="float:right;" alt="">
 	</div>
-	
+	<div id="topmenu">
+	<% if current_user %>
+		<span><%= link_to 'My Cards', cards_url %></span>
+		<span><%= link_to 'My Site', index_url(:subdomain => current_user.username), :popup => true %></span>
+		<span><%= link_to 'Settings', edit_user_path(current_user) %></span>
+		<span><%= link_to 'Logout', logout_url %></span>
+	<% elsif request.subdomain == nil %>
+		<span><%= link_to 'Login', login_url(:subdomain => 'www') %></span>
+	<% end %>
+	</div>
 	<div id="distance"></div> 
 	<div id="container"> 
 		<div class="slider-wrap">
 			<div id="slider" class="stripViewer">
 				<div class="panelContainer">
 					<div id="pictures">
-						<% if current_subdomain != nil && User.find_by_username(current_subdomain) != nil %>
-							<% @page_user = User.find_by_username(current_subdomain) %>
+						<% if request.subdomain != nil && User.find_by_username(request.subdomain) != nil %>
+							<% @page_user = User.find_by_username(request.subdomain) %>
 							<%= render :partial => 'showcards' %>
 						<% else %>
-						<div id="slider1" class="card-div unitPng">
+						<div id="card1" class="slider1 card-div unitPng">
 							<div class="panel">
 								<div class="wrapper">
 									<%= yield %>
@@ -52,7 +56,7 @@
 				<div class=" png_bg" id="tack" style="z-index:100; position:absolute; left:338px; top:10px; background: url('/images/tack.png') no-repeat; width:50px; height:50px;"></div>
 				<div class=" png_bg" id="shadow" style="display:inline; z-index:99; position:absolute; left:330px; top:8px; background: url('/images/shadow.png') no-repeat; width:58px; height:54px;"></div>
 				</div><!-- .panelContainer --> 
-			</div><!-- #slider1 -->
+			</div><!-- #slider -->
 		</div><!-- .slider-wrap -->
 	</div> 
  </div>

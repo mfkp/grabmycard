@@ -1,92 +1,85 @@
-	* {
-		margin:0;
-		padding:0;
-		}
- 
-	html, body {
-		height:100%;
-		overflow:hidden;
-		}
- 
-	body {
-		background: url('../images/cork_bg.jpg') repeat top left;
-		color:#630;
-		font:100.01%/1.4 sans-serif;
-		text-align:center; /* horizontal centering for IE Win quirks */
-		}
- 
-	#wrapper {
-		min-height: 100%;
-		height: 100%; 
-		width:100%; 
-		overflow:hidden; 
-		margin-bottom:-53px;
-	}
-	
-	#distance { 
-		width:1px;
-		height:50%;
-		background-color:#fc6;
-		margin-bottom:-13.75em; /* half of container's height */
-		float:left;
-		}
- 
-	#container {
-		margin:0 auto;
-		position:relative; /* puts container in front of distance */
-		text-align:left;
-		height:27.5em;
-		width:45em;
-		clear:left;
-		background: url('images/card.png') no-repeat;
-		}
- 
-	#container div h2 {
-		font-size:120%;
-		font-weight:bold;
-		text-transform:uppercase;
-		margin:1em 0 0;
-		}
- 
-	#container div h3 {
-		font-size:100%;
-		font-weight:bold;
-		margin:.5em 0 0 .75em;
-		}
- 
-	#container ul {
-		margin-left:2em;
-		}
- 
-	#container li span {
-		font-size:70%;
-		}
-		
-	#container h1 {
-		font-size:120%;
-		padding-top:2.4em;
-		margin-left:2.4em;
-		}
- 
-	#container p {
-		margin:1.5em 1.5em 1.5em 3em;
-		}
- 
-	address {
-		font-weight:normal;
-		font-size:80%;
-		font-style:normal;
-		text-align:right;
-		margin:0 20em 0 3em;
-		}
-	
-	#footer { 
-		position: fixed; 
-		clear: both; 
-		width: 100%; 
-		height: 53px; 
-		bottom: 0; 
-		left: 0;
-		border: none; 
-		background: url('../images/frame_bottom.jpg') repeat-x bottom left;
-	}
+* {
+	margin:0;
+	padding:0;
+}
+
+html, body {
+	height:100%;
+	overflow:hidden;
+}
+
+body {
+	background: url('../images/cork.jpg') repeat top left;
+	color:#630;
+	font:100.01%/1.4 sans-serif;
+	text-align:center; /* horizontal centering for IE Win quirks */
+}
+
+#topmenu {
+	position:relative; 
+	top: 0; 
+	float:right; 
+	color:#000;
+}
+
+#topmenu a {
+	color:#000;
+	text-decoration: none;
+}
+
+#topmenu span {
+	background: #fff;
+	padding: 5px 10px;
+	margin: 0px;
+	border: 1px solid black;
+}
+
+#wrapper {
+	min-height: 100%;
+	height: 100%; 
+	width:100%; 
+	overflow:hidden; 
+	margin-bottom:-53px;
+}
+
+#distance { 
+	width:1px;
+	height:50%;
+	background-color:#fc6;
+	margin-bottom:-13.75em; /* half of container's height */
+	float:left;
+}
+
+#container {
+	margin:0 auto;
+	position:relative; /* puts container in front of distance */
+	text-align:left;
+	height:27.5em;
+	width:45em;
+	clear:left;
+}
+
+#container div h3 {
+	font-size:100%;
+	font-weight:bold;
+	margin:.5em 0 0 .75em;
+}
+
+#container p {
+	margin:1.5em 1.5em 1.5em 1.5em;
+}
+
+#container a {
+	color: #630;
+}
+
+#footer { 
+	position: fixed; 
+	clear: both; 
+	width: 100%; 
+	height: 53px; 
+	bottom: 0; 
+	left: 0;
+	border: none; 
+	background: url('../images/frame_bottom.jpg') repeat-x bottom left;
+}

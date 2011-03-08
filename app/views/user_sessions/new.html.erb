@@ -1,6 +1,6 @@
 <h1>Log In</h1>
 
-<% form_for(@user_session) do |f| %>
+<%= form_for(@user_session, :url => { :action => "create" }) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -12,7 +12,7 @@
     <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.submit 'Log In' %> | <%= link_to 'Cancel', root_url %>
+    <%= f.submit 'Log In' %> | <%= link_to 'Cancel', index_url %>
   </p>
 <% end %>
 

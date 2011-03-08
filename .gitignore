@@ -1,4 +1,7 @@
-app/views/*/.tmp*
-#.gitignore
-#config/database.yml
-db/schema.rb
+db/*
+log/*
+public/*/cache/*
+config/database.yml
+Capfile
+config/deploy.rb
+config/application.rb
