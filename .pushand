@@ -1,2 +1,2 @@
 #! /bin/bash
-phd $0 grabmycard grabmycard
+phd $0 grabmycard *.grabmycard.com
