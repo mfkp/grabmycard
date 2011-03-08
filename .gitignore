@@ -4,4 +4,4 @@ public/*/cache/*
 config/database.yml
 Capfile
 config/deploy.rb
-config/application.rb
+#config/application.rb
