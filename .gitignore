@@ -1,0 +1,4 @@
+app/views/*/.tmp*
+#.gitignore
+#config/database.yml
+db/schema.rb
