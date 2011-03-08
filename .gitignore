@@ -1,6 +1,6 @@
 db/*
 log/*
-public/*/cache/*
+#public/*/cache/*
 config/database.yml
 Capfile
 config/deploy.rb
